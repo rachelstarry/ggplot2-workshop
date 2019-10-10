@@ -80,10 +80,10 @@ p1 + geom_point(aes(color = four_regions),        # This is also correct. But it
 
 # In the original Gapminder chart, color represents world region; point size represents population;
 # and the size of the text label is linked to point size and therefore also to population.
-p2 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
+p1 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
   geom_point(aes(size = population_2015, color = four_regions)) +
   geom_text(aes(label = country, size = population_2015))
-p2
+p1
 
 # Scales: Controlling Aesthetic Mapping ----
 
@@ -93,15 +93,75 @@ p2
 
 # Scales control the precise way aesthetic mapping happens. Scales are added as an additional "layer"
 # to an existing ggplot, just like we added additional geoms!
-p3 <- p2 + scale_size(range = c(2, 20))
-p3
+p2 <- p1 + scale_size(range = c(2, 20))
+p2
 
 # This sets the scale for the aesthetic mapping "size." Note that we use the aes "size" in two different
 # geoms, geom_point and geom_text, so the sizes of both the points and text labels are affected.
 
 # There are lots of scales available. In RStudio, type scale_<tab> to view the options.
 
-# Let's specify the exact color scale we want to use for the four world regions. 
-p3 <- p3 + scale_color_manual(values = c("asia" = "red", "africa" = "light blue", "europe" = "yellow", 
+# In particular, there are lots of color scales to choose from. But since our example uses four specific
+# colors, let's specify the exact color scale we want to use for the four world regions. 
+p2 <- p2 + scale_color_manual(values = c("asia" = "red", "africa" = "light blue", "europe" = "yellow", 
                                          "americas" = "green"))
-p3
+p2
+
+# Themes ----
+
+# We can customize the overall appearance of our ggplot as well as particular plot annotations 
+# by using built-in ggplot2 themes and themes from the ggthemes package.
+
+# Themes are added on top of geoms in the same way as scales, using the + operator.
+p2 + theme_minimal()
+p2 + theme_economist_white()
+
+# It's easy to create your own custom theme with the theme() function. Read all about theme elements at
+# https://ggplot2.tidyverse.org/reference/theme.html 
+# We will make some changes to the theme as we clean up our chart and make it look more like the original.
+
+# All the Little Things ----
+
+# To make our plot look like the Gapminder example, we still need to...
+# [] add a stroke around the bubbles
+# [] fix the chart legends
+# [] change the axis titles
+# [] add a chart title 
+# [] format the chart axes
+# [] change the font
+
+# Let's start by copying and pasting all of our modifications from above.
+p3 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
+  geom_point(aes(size = population_2015, color = four_regions)) +
+  geom_text(aes(label = country, size = population_2015)) +
+  scale_size(range = c(2, 20)) +
+  scale_color_manual(values = c("asia" = "red", "africa" = "light blue", "europe" = "yellow", 
+                                "americas" = "green"))
+
+# We'll need to make some changes to the aesthetic mapping and scales we used earlier to adjust things
+# like adding a stroke around the bubbles and adjusting the chart legends, since those need to happen
+# in the geom and scale function calls. Compare the code below to the code above to see where the
+# changes described in the following lines are added.
+
+# 1) We're using a different shape - an open circle that lets us use fill to color the inside, but note
+# how the fixed aesthetics for shape and color are put *outside* the aes() call for geom_point().
+
+# 2) In geom_text, we're using show.legend = F to remove the text legend, and in scale_size we're
+# using guide = "none" to turn off the point size legend.
+
+
+p4 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
+  geom_point(aes(size = population_2015, fill = four_regions), shape = 21, color = "black") +
+  geom_text(aes(label = country, size = population_2015), show.legend = F) +
+  scale_size(range = c(2, 20), guide = "none") +
+  scale_color_manual(name = "World Region", values = c("asia" = "red", "africa" = "light blue", 
+                                                       "europe" = "yellow", "americas" = "green"),
+                     labels = c("Africa", "Americas", "Asia", "Europe"))
+
+# Let's then choose a theme that's pretty close to what we're looking for in terms of chart background.
+p4 <- p4 + theme_minimal()
+
+# We tweaked the legends a bit already, but we can also adjust the title
+
+
+
