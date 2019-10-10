@@ -1,0 +1,188 @@
+country,income_per_capita_2011,life_expectancy_2016,population_2015,four_regions
+Afghanistan,1660,58,3.37E+07,asia
+Albania,10200,77.7,2920000,europe
+Algeria,13000,77.4,3.99E+07,africa
+Andorra,42000,82.5,78000,europe
+Angola,5910,64.7,2.79E+07,africa
+Antigua and Barbuda,18600,77.3,99900,americas
+Argentina,19600,76.7,4.34E+07,americas
+Armenia,7020,75.7,2920000,europe
+Australia,41800,82.5,2.38E+07,asia
+Austria,44200,81.5,8680000,europe
+Azerbaijan,15800,72.1,9620000,europe
+Bahamas,22700,73.8,387000,americas
+Bahrain,40700,76.9,1370000,asia
+Bangladesh,2570,72.8,1.61E+08,asia
+Barbados,15400,76.5,284000,americas
+Belarus,17200,73.5,9490000,europe
+Belgium,41200,80.9,1.13E+07,europe
+Belize,7860,72,359000,americas
+Benin,1820,64.4,1.06E+07,africa
+Bhutan,6810,74.1,787000,asia
+Bolivia,5600,73.3,1.07E+07,americas
+Bosnia and Herzegovina,9890,77.6,3540000,europe
+Botswana,13900,65.5,2210000,africa
+Brazil,15000,75.3,2.06E+08,americas
+Brunei,82400,77,418000,asia
+Bulgaria,15700,75.1,7180000,europe
+Burkina Faso,1470,60.8,1.81E+07,africa
+Burundi,772,60.4,1.02E+07,africa
+Cambodia,2660,68.7,1.55E+07,asia
+Cameroon,2690,60.2,2.28E+07,africa
+Canada,41600,81.8,3.59E+07,americas
+Cape Verde,5990,73.7,533000,africa
+Central African Republic,912,50.3,4550000,africa
+Chad,1860,59.8,1.40E+07,africa
+Chile,20400,80.2,1.78E+07,americas
+China,10400,76.6,1.40E+09,asia
+Colombia,11500,78.2,4.82E+07,americas
+Comoros,1420,67.6,777000,africa
+"Congo, Dem. Rep.",630,61.6,7.62E+07,africa
+"Congo, Rep.",5210,63,5000000,africa
+Costa Rica,13400,81,4810000,americas
+Cote d'Ivoire,2510,60,2.31E+07,africa
+Croatia,20700,77.3,4240000,europe
+Cuba,18800,79,1.15E+07,americas
+Cyprus,33200,80.5,1160000,europe
+Czech Republic,28800,79.1,1.06E+07,europe
+Denmark,44400,80.8,5690000,europe
+Djibouti,2700,66.7,927000,africa
+Dominica,10100,73,73200,americas
+Dominican Republic,11300,75.7,1.05E+07,americas
+Ecuador,9930,77.9,1.61E+07,americas
+Egypt,9820,72.2,9.38E+07,africa
+El Salvador,7430,75.3,6310000,americas
+Equatorial Guinea,34400,65.5,1180000,africa
+Eritrea,1510,63.7,4850000,africa
+Estonia,24500,77.4,1320000,europe
+Ethiopia,1160,65.6,9.99E+07,africa
+Fiji,7490,65.5,892000,asia
+Finland,40700,81.7,5480000,europe
+France,37500,82.3,6.45E+07,europe
+Gabon,15900,66.6,1930000,africa
+Gambia,1540,67.3,1980000,africa
+Georgia,7320,74,3950000,europe
+Germany,42700,80.9,8.17E+07,europe
+Ghana,3400,66,2.76E+07,africa
+Greece,26100,81,1.12E+07,europe
+Grenada,11200,71.6,107000,americas
+Guatemala,6840,72.7,1.63E+07,americas
+Guinea,1210,60.7,1.21E+07,africa
+Guinea-Bissau,1480,58.8,1770000,africa
+Guyana,6130,67.9,769000,americas
+Haiti,1560,64,1.07E+07,americas
+Honduras,4050,72.7,8960000,americas
+Hungary,22700,75.7,9780000,europe
+Iceland,39500,82.3,330000,europe
+India,4640,68.6,1.31E+09,asia
+Indonesia,8840,71.7,2.58E+08,asia
+Iran,17900,76.1,7.94E+07,asia
+Iraq,13300,67.7,3.61E+07,asia
+Ireland,45500,81.2,4700000,europe
+Israel,30500,82.1,8060000,asia
+Italy,36300,82.3,5.95E+07,europe
+Jamaica,8100,74.9,2870000,americas
+Japan,35800,83.9,1.28E+08,asia
+Jordan,9210,76.3,9160000,asia
+Kazakhstan,21300,71.7,1.77E+07,asia
+Kenya,2560,66.9,4.72E+07,africa
+Kiribati,1710,61.9,112000,asia
+North Korea,1400,70.7,2.52E+07,asia
+South Korea,31200,80.9,5.06E+07,asia
+Kuwait,77500,79.7,3940000,asia
+Kyrgyz Republic,2920,71.2,5870000,asia
+Lao,4240,67.3,6660000,asia
+Latvia,19800,74.9,1990000,europe
+Lebanon,15700,80.1,5850000,asia
+Lesotho,2500,50.4,2170000,africa
+Liberia,734,64.4,4500000,africa
+Libya,11200,75.1,6230000,africa
+Lithuania,22900,75,2930000,europe
+Luxembourg,92000,82.1,567000,europe
+"Macedonia, FYR",11600,74.9,2080000,europe
+Madagascar,1370,62.7,2.42E+07,africa
+Malawi,1050,60.3,1.76E+07,africa
+Malaysia,21800,75.6,3.07E+07,asia
+Maldives,11100,79.5,418000,asia
+Mali,1880,61.9,1.75E+07,africa
+Malta,28600,81.4,428000,europe
+Marshall Islands,3500,65,53000,asia
+Mauritania,3370,70.3,4180000,africa
+Mauritius,16600,74.6,1260000,africa
+Mexico,15900,76.4,1.26E+08,americas
+"Micronesia, Fed. Sts.",3410,65.6,104000,asia
+Moldova,4180,72.2,4070000,europe
+Mongolia,8880,68.3,2980000,asia
+Montenegro,14500,77,628000,europe
+Morocco,6690,75,3.48E+07,africa
+Mozambique,955,60,2.80E+07,africa
+Myanmar,3900,70,5.24E+07,asia
+Namibia,8720,64.8,2430000,africa
+Nepal,2030,70.8,2.87E+07,asia
+Netherlands,46100,81.6,1.69E+07,europe
+New Zealand,32700,81.5,4610000,asia
+Nicaragua,4230,78.2,6080000,americas
+Niger,802,61.7,1.99E+07,africa
+Nigeria,5260,65,1.81E+08,africa
+Norway,62100,82.1,5200000,europe
+Oman,42100,77.6,4200000,asia
+Pakistan,4310,67.7,1.89E+08,asia
+Panama,16900,79,3970000,americas
+Papua New Guinea,2260,60.8,7920000,asia
+Paraguay,7500,74.6,6640000,americas
+Peru,10400,79.7,3.14E+07,americas
+Philippines,5710,70.3,1.02E+08,asia
+Poland,22800,77.9,3.83E+07,europe
+Portugal,26800,80.9,1.04E+07,europe
+Qatar,129000,80.4,2480000,asia
+Romania,18100,75.3,1.99E+07,europe
+Russia,24100,70.8,1.44E+08,europe
+Rwanda,1420,67.7,1.16E+07,africa
+St. Lucia,10800,76.2,177000,americas
+St. Vincent and the Grenadines,9870,71.8,109000,americas
+Samoa,5670,72,194000,asia
+Sao Tome and Principe,2700,70.6,196000,africa
+Saudi Arabia,48500,77.3,3.16E+07,asia
+Senegal,2160,66.2,1.50E+07,africa
+Serbia,13000,75.9,8850000,europe
+Seychelles,22600,73.8,93700,africa
+Sierra Leone,1250,59.1,7240000,africa
+Singapore,75000,83.7,5540000,asia
+Slovak Republic,25800,76.9,5440000,europe
+Slovenia,28800,80.8,2070000,europe
+Solomon Islands,1970,63.1,587000,asia
+Somalia,614,57.2,1.39E+07,africa
+South Africa,12200,62.4,5.53E+07,africa
+Spain,32100,82.9,4.64E+07,europe
+Sri Lanka,9210,77.4,2.07E+07,asia
+Sudan,3630,68.3,3.86E+07,africa
+Suriname,14900,71.4,553000,americas
+Swaziland,7320,57.7,1320000,africa
+Sweden,43800,82,9760000,europe
+Switzerland,55900,83.1,8320000,europe
+Syria,6360,68.4,1.87E+07,asia
+Tajikistan,2210,71.9,8550000,asia
+Tanzania,2190,64.3,5.39E+07,africa
+Thailand,13500,77.8,6.87E+07,asia
+Timor-Leste,1960,72.7,1240000,asia
+Togo,1230,62.6,7420000,africa
+Tonga,5100,70.4,106000,asia
+Trinidad and Tobago,31000,73.2,1360000,americas
+Tunisia,10100,77.5,1.13E+07,africa
+Turkey,19700,79.1,7.83E+07,europe
+Turkmenistan,11200,70.2,5570000,asia
+Uganda,1630,62.3,4.01E+07,africa
+Ukraine,8280,72,4.47E+07,europe
+United Arab Emirates,58400,76.6,9150000,asia
+United Kingdom,36500,80.9,6.54E+07,europe
+United States,49800,78.8,3.20E+08,americas
+Uruguay,17900,77.3,3430000,americas
+Uzbekistan,4470,70.3,3.10E+07,asia
+Vanuatu,2920,64,265000,asia
+Venezuela,17000,75.5,3.12E+07,americas
+Palestine,2660,71.8,4660000,asia
+Vietnam,4720,74.5,9.36E+07,asia
+Yemen,3800,66.7,2.69E+07,asia
+Zambia,3360,58.8,1.61E+07,africa
+Zimbabwe,1660,59.3,1.58E+07,africa
+South Sudan,3480,59.7,1.19E+07,africa
