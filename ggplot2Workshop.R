@@ -1,6 +1,7 @@
 # Install packages (only run these lines ONCE; erase the # to "uncomment" and run the following lines)
 # install.packages("tidyverse")
 # install.packages("ggthemes")
+# install.packages("plotly")
 
 # Intro to ggplot2 ----
 
@@ -10,6 +11,7 @@
 # Load the required packages into our working environment
 library(tidyverse)
 library(ggthemes)
+library(plotly)
 
 # Read in the dataset
 gapdata <- read_csv("data/gap_data_clean.csv")
@@ -18,6 +20,9 @@ gapdata <- read_csv("data/gap_data_clean.csv")
 View(gapdata)
 
 # Geoms and Aesthetic Mapping ----
+
+# Geometric objects (geom) are the actual markings we add to a plot, like points, lines, or bars.
+# In RStudio, type geom_<tab> to see a list of geoms you can add to a ggplot.
 
 # In ggplot2, an *aesthetic* means "an aspect of a geometric object (geom) that you can see,"
 # such as the position (of points) on the x and y axes, color ("outside" color), fill ("inside" color), 
@@ -154,7 +159,6 @@ p5 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
 
 # 3) In scale_fill_manual, we're overriding the name and value labels for our fill scale legend.
 
-
 p6 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016)) +
   geom_point(aes(size = population_2015, fill = four_regions), shape = 21, color = "black") +
   geom_text(aes(label = country, size = population_2015), show.legend = F) +
@@ -184,7 +188,7 @@ p8 <- p7 + coord_cartesian(xlim = c(5.7, 12), ylim = c(45, 85)) # This sets the 
 # We also still need to adjust the axis labels for the x axis, which we changed from the original
 # GDP per capita values to the log values to spread out the data like the original graph does.
 # To do this, we can manually set the x axis ticks and label text using scale_x_continuous.
-p9 <- p8 + scale_x_continuous(breaks=c(5,6,7,8,9,10,11,12), 
+p9 <- p8 + scale_x_discrete(breaks=c(5,6,7,8,9,10,11,12), 
                               labels=c(exp(5), exp(6), exp(7), exp(8), exp(9), exp(10), exp(11), exp(12)))
 
 # With the paste() command, we can also add $ to each label.
@@ -205,6 +209,36 @@ p11 <- p8 + scale_x_continuous(breaks=c(5,6,7,8,9,10,11,12),
 # https://ggplot2.tidyverse.org/reference/theme.html 
 p12 <- p11 + theme(legend.box.background = element_rect(), # add a box border to the legend
                  legend.box.margin = margin(6, 6, 6, 6), # set the margins of the legend border
-                 
                  plot.title = element_text(face = "bold") # make the plot title text bold
                  )
+
+# Our final plot is a bit difficult to read. While ggplot2 is not ideal for designing interactive charts,
+# you can create an interactive version of your ggplot with a call to ggplotly(), from the plotly package.
+
+# First, let't recreate the chart by combining all of our code from above. We also need to specify a label
+# in the main ggplot aesthetics, which we will use for the interactive "tooltip," and we should
+# removing the text geom to make the chart more readable.
+p13 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016, label = country)) +
+  geom_point(aes(size = population_2015, fill = four_regions), shape = 21, color = "black") +
+  scale_size(range = c(2, 20), guide = "none") +
+  scale_fill_manual(values = c("asia" = "red", "africa" = "light blue", "europe" = "yellow", 
+                               "americas" = "green"), name = "World Region", 
+                    labels = c("Africa", "Americas", "Asia", "Europe")) +
+  labs(title = "Health and Income of Nations in 2015",
+       subtitle = "This graph compares Life Expectency & GDP per capita for all 182 nations recognized by the UN",
+       caption = "Data source: www.gapminder.org",
+       x = "GDP per capita ($ adjusted for price differences, PPP 2011)",
+       y = "Life expectancy (years)") +
+  coord_cartesian(xlim = c(5, 12), ylim = c(45, 85)) +
+  scale_x_continuous(breaks=c(5,6,7,8,9,10,11,12), 
+                     labels=c(paste0("$", round(exp(5))), paste0("$", round(exp(6))), 
+                              paste0("$", round(exp(7))), paste0("$", round(exp(8))),
+                              paste0("$", round(exp(9))), paste0("$", round(exp(10))), 
+                              paste0("$", round(exp(11))), paste0("$", round(exp(12))))) +
+  theme_minimal() + theme(legend.box.background = element_rect(),
+                          legend.box.margin = margin(6, 6, 6, 6),
+                          plot.title = element_text(face = "bold"))
+
+# Some of our plot elements will be lost or overwritten when ggplotly() converts our ggplot to a plotly graph,
+# but with very cluttered plots, interactive versions can be much easier to interpret!
+ggplotly(p13, tooltip = "label")
