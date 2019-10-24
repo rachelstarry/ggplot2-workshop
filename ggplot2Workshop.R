@@ -188,7 +188,7 @@ p8 <- p7 + coord_cartesian(xlim = c(5.7, 12), ylim = c(45, 85)) # This sets the 
 # We also still need to adjust the axis labels for the x axis, which we changed from the original
 # GDP per capita values to the log values to spread out the data like the original graph does.
 # To do this, we can manually set the x axis ticks and label text using scale_x_continuous.
-p9 <- p8 + scale_x_discrete(breaks=c(5,6,7,8,9,10,11,12), 
+p9 <- p8 + scale_x_continuous(breaks=c(5,6,7,8,9,10,11,12), 
                               labels=c(exp(5), exp(6), exp(7), exp(8), exp(9), exp(10), exp(11), exp(12)))
 
 # With the paste() command, we can also add $ to each label.
@@ -242,3 +242,6 @@ p13 <- ggplot(gapdata, aes(log(income_per_capita_2011), life_expectancy_2016, la
 # Some of our plot elements will be lost or overwritten when ggplotly() converts our ggplot to a plotly graph,
 # but with very cluttered plots, interactive versions can be much easier to interpret!
 ggplotly(p13, tooltip = "label")
+
+# To save ggplots you have made, either export them in RStudio as an image or PDF, or use the ggsave() command.
+ggsave(filename = "plot1.png")     # This will save the last plot you displayed; additional settings available
